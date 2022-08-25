@@ -19,6 +19,8 @@ class AuthController {
     this.router.post("/login", this.login);
     this.router.post("/register", this.register);
     this.router.get("/signout", this.signout);
+    this.router.get("/verify", this.verifyEmail);
+    this.router.get("/forgot", this.forgotPassword);
   }
   public getRouter(): any {
     return this.router;
@@ -47,9 +49,11 @@ class AuthController {
       const payload = {
         id: user._id,
         email: user.email,
-        expire: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        //expires in 3 hours
+        expires: Date.now() + 1000 * 60 * 60 * 3,
       };
       const token = Jwt.sign(payload, process.env.SESSION_SECRET);
+      User.findByIdAndUpdate(user._id, { token: token });
       passport.authenticate("bearer", { session: true });
       return res.status(200).send({ token: token });
     });
@@ -98,6 +102,13 @@ class AuthController {
   private async signout(req: Request, res: Response) {
     return res.status(200).send({ message: "Signout success" });
   }
+  private async verifyEmail(req: Request, res: Response) {
+    return res.status(200).send({ message: "Email verified" });
+  }
+  private async forgotPassword(req: Request, res: Response) {
+    return res.status(200).send({ message: "Password reset link sent" });
+  }
+
 }
 
 export default new AuthController().getRouter();

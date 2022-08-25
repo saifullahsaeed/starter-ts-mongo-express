@@ -21,6 +21,7 @@
   "homepage": "https://github.com/saifullahsaeed/starter-ts-mongo-express#readme",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/express-session": "^1.17.5",
     "@types/jsonwebtoken": "^8.5.9",
     "@types/node": "^18.7.13",
     "@types/passport-http-bearer": "^1.0.37",
@@ -34,6 +35,7 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.19",

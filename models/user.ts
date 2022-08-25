@@ -23,6 +23,9 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         trim: true,
     },
+    token: {
+        type: String,
+    },
 },{timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }});
 
 userSchema.pre('save', function(next) {
