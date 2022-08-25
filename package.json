@@ -1,0 +1,38 @@
+{
+  "name": "starter-ts-mongo-express",
+  "version": "1.0.0",
+  "description": "Starter Kit Mongo DB TypeScript and express js",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifullahsaeed/starter-ts-mongo-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifullahsaeed/starter-ts-mongo-express/issues"
+  },
+  "homepage": "https://github.com/saifullahsaeed/starter-ts-mongo-express#readme",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.7.13",
+    "@types/passport-http-bearer": "^1.0.37",
+    "cors": "^2.8.5",
+    "helmet": "^5.1.1",
+    "mongoose": "^6.5.3",
+    "morgan": "^1.10.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "passport": "^0.6.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local-mongoose": "^7.1.2"
+  }
+}
