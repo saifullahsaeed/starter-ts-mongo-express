@@ -8,7 +8,14 @@ import mongoose from 'mongoose';
 import {config} from './config';
 const app = express();
 const router = express.Router();
-const userRouter = require('./routes/user');
+import userRouter from './pages/auth/login.controller';
+import * as dotenv from "dotenv";
+dotenv.config(
+    {
+        path: "./.env"
+    }
+);
+
 
 
 //connect to mongodb
@@ -26,7 +33,7 @@ app.use(helmet());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/api', userRouter);
+app.use('/api/auth', userRouter);
 
 
 app.listen(config.port, () => {

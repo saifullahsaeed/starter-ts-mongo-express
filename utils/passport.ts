@@ -1,4 +1,4 @@
-import BearerStrategy from 'passport-http-bearer';
+const BearerStrategy = require('passport-http-bearer').Strategy;
 import User from '../models/user';
 import Jwt from './jwt';
 
