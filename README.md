@@ -52,5 +52,5 @@ This is a starter kit for a Mongo DB TypeScript and express js application.
     
 ## Author
 
-[@saifullahsaeed](https://twitter.com/saifullahsaee4)
-[@saifullahsaeed](https://saifullahsaeed.github.io)
+[saifullahsaeed](https://twitter.com/saifullahsaee12)
+[saifullahsaeed Website](https://saifullahsaeed.github.io)
