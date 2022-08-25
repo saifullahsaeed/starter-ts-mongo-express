@@ -1,9 +1,9 @@
 //make micro service for user
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
+const cors = require('cors');
 import helmet from 'helmet';
-import morgan from 'morgan';
+var morgan = require('morgan')
 import mongoose from 'mongoose';
 import {config} from './config';
 const app = express();
@@ -27,3 +27,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/api', userRouter);
+
+
+app.listen(config.port, () => {
+    console.log(`server is running on port ${config.port}`);
+}
+);
+
